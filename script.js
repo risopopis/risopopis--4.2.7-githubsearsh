@@ -43,14 +43,10 @@ class View {
     addRepo(repo, id) {
       const HTMLelem = document.getElementById(id);
       const savedElement = this.createElement("li", "main__saved-element");
-      const name = this.createElement("span");
-      const stars = this.createElement("span");
-      const owner = this.createElement("span");
+      const name = document.createTextNode( `Name: ${repo.name}`);
+      const stars = document.createTextNode( `Stars: ${repo.stargazers_count}`);
+      const owner = document.createTextNode(`Owner: ${repo.owner.login}`);
       const deleteButton = this.createElement("button", "remove-button");
-  
-      name.textContent = `Name: ${repo.name}`;
-      stars.textContent = `Stars: ${repo.stargazers_count}`;
-      owner.textContent = `Owner: ${repo.owner.login}`;
       deleteButton.textContent = "X";
   
       savedElement.append(name);
@@ -77,15 +73,16 @@ class View {
       );
     }
   
-    searchRepo() {
-      let searchValue = this.view.searchInput.value;
-      if (searchValue) {
-        this.clearRepos();
-        this.repoRequest(searchValue);
-      } else {
-        this.clearRepos();
-      }
-    }
+    
+searchRepo() {
+
+  let searchValue = this.view.searchInput.value;
+
+  this.clearRepos();
+  if (searchValue) {        
+  this.repoRequest(searchValue);
+  }
+}
   
     repoRequest(searchValue) {
       try {
