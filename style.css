@@ -1,0 +1,58 @@
+body{
+    background-color: rgb(148, 227, 239);
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-input{
+    border-radius: 10px;
+    border-color: sandybrown;
+    width: 500px;
+    font-size:xx-large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main__result-list{
+    padding: 0;
+    font-size:large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 500px;
+    list-style: none;
+    
+}
+
+.main__repository{
+    border: solid 1px black;
+    padding: 15px;
+    background-color: rgb(134, 209, 156);
+}
+
+.main__saved{
+    padding: 0;
+    list-style: none;
+    font-size:large;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.main__saved-element{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px black;
+    padding: 15px;
+    background-color: rgb(226, 136, 205);
+}
+
+.remove-button{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: -65px;
+    right: -440px;
+    padding: 0;
+    border-radius: 7px;
+}
